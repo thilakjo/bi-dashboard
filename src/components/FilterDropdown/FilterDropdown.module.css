@@ -1,0 +1,45 @@
+.filterContainer {
+  margin-bottom: 10px;
+  min-width: 180px; /* Adjust as needed */
+}
+
+.filterContainer label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.select {
+  font-size: 0.9em;
+}
+
+/* React-Select specific overrides for better aesthetics if needed */
+.react-select__control {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+  min-height: 34px !important;
+}
+
+.react-select__multi-value {
+  background-color: #e0e0e0 !important;
+  border-radius: 4px !important;
+}
+
+.react-select__multi-value__label {
+  color: #333 !important;
+}
+
+.react-select__multi-value__remove {
+  color: #777 !important;
+}
+
+.react-select__option--is-focused {
+  background-color: #f0f0f0 !important;
+}
+
+.react-select__option--is-selected {
+  background-color: #007bff !important;
+  color: white !important;
+}
