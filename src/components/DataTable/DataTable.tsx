@@ -16,7 +16,6 @@ const DataTable: React.FC<DataTableProps> = ({ data, columnHeaders }) => {
   const startIndex = (currentPage - 1) * ROWS_PER_PAGE;
   const endIndex = startIndex + ROWS_PER_PAGE;
 
-  // Reset page if filtered data causes current page to be out of bounds
   React.useEffect(() => {
     if (currentPage > totalPages && totalPages > 0) {
       setCurrentPage(totalPages);
@@ -85,7 +84,6 @@ const DataTable: React.FC<DataTableProps> = ({ data, columnHeaders }) => {
         </button>
         <span>
           Page {currentPage} of {totalPages === 0 ? 1 : totalPages}{" "}
-          {/* Handle 0 total pages */}
         </span>
         <button
           onClick={() => handlePageChange(currentPage + 1)}

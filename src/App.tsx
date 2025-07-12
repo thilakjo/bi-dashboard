@@ -29,10 +29,6 @@ const DashboardContent: React.FC = () => {
     return <div className="dashboard-error-container">Error: {error}</div>;
   }
 
-  // Filter out the 'number' column from the filter dropdowns if you want it to be handled differently
-  // or if it's always just a direct search/filter.
-  // Based on your screenshot, 'number' is a regular filter, so include it.
-
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-title">BI Dashboard</h1>

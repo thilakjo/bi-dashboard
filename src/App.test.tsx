@@ -44,7 +44,6 @@ test("renders BI Dashboard title after loading", async () => {
     screen.queryByText(/Loading dashboard data.../i)
   ).not.toBeInTheDocument();
 
-  // Now, getByLabelText should work correctly because the label points to the actual input
   const numberFilter = screen.getByLabelText(/number/i);
   expect(numberFilter).toBeInTheDocument();
 

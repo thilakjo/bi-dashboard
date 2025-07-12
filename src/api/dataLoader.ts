@@ -10,7 +10,6 @@ export const loadCsvData = async (filePath: string): Promise<DataRow[]> => {
       complete: (results) => {
         const cleanedData = results.data.filter(
           (row) =>
-            // Ensure row is an object and has at least one non-null/non-empty value
             typeof row === "object" &&
             row !== null &&
             Object.values(row as DataRow).some(

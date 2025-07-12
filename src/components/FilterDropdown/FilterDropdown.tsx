@@ -2,7 +2,7 @@
 
 import React, { useCallback, useMemo } from "react";
 
-import Select, { MultiValue } from "react-select"; // Import MultiValue type
+import Select, { MultiValue } from "react-select";
 import { DropdownOption } from "../../types";
 import styles from "./FilterDropdown.module.css";
 
@@ -19,7 +19,6 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   selectedValues,
   onSelectionChange,
 }) => {
-  // Use MultiValue type for selectedOption
   const handleChange = useCallback(
     (selectedOption: MultiValue<DropdownOption>) => {
       const values = selectedOption
@@ -31,23 +30,16 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   );
 
   const selectedOptions = useMemo(() => {
-    // Ensure we only show selected options that are also present in the current 'options' list
     return options.filter((option) => selectedValues.includes(option.value));
   }, [options, selectedValues]);
 
-  // Define the ID that will be applied to the *internal input* of react-select
-  const inputElementId = `filter-input-${columnId}`; // A more descriptive ID for the input
+  const inputElementId = `filter-input-${columnId}`;
 
   return (
     <div className={styles.filterContainer}>
-      {/* The label's 'htmlFor' must point to the *input's* ID */}
       <label htmlFor={inputElementId}>{columnId}</label>
       <Select
-        // Change 'id' to 'inputId' here. This is the crucial fix!
-        // This prop tells react-select to assign this ID to its *actual input* element.
         inputId={inputElementId}
-        // It's still good practice to have a unique instanceId for react-select itself
-        // to prevent potential collisions with its internal component IDs.
         instanceId={`react-select-instance-${columnId}`}
         isMulti
         options={options}

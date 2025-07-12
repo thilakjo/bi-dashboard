@@ -20,10 +20,9 @@ export const useDashboardData = () => {
       setLoading(true);
       setError(null);
       try {
-        const data = await loadCsvData(DATASET_LARGE_PATH);
+        const data = await loadCsvData(DATASET_LARGE_PATH); // change to DATASET_SMALL_PATH for smaller dataset
         setOriginalData(data);
         if (data.length > 0) {
-          // Get headers from the first row of data
           setColumnHeaders(Object.keys(data[0]));
         }
       } catch (err) {
@@ -34,7 +33,7 @@ export const useDashboardData = () => {
       }
     };
     fetchData();
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   const filteredData = useMemo(() => {
     return applyFilters(originalData, activeFilters);
@@ -88,7 +87,5 @@ export const useDashboardData = () => {
     activeFilters,
     debouncedHandleFilterChange,
     getFilterDropdownOptions,
-    // Expose DATASET_LARGE_PATH if you want a button to switch datasets
-    // DATASET_LARGE_PATH,
   };
 };
