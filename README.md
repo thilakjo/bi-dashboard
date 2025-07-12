@@ -1,40 +1,68 @@
-# BI Dashboard
+# 📊 BI Dashboard
 
-A dummy business intelligence dashboard built with React and TypeScript, featuring interactive filtering functionality and data display.
+A dummy Business Intelligence dashboard built with **React** and **TypeScript**, featuring interactive filtering and optimized data handling for large datasets.
 
-## Features:
+---
 
-- Filter data based on column values
-- Dynamic adjustment of filter options based on other active filters (Amazon-like behavior)
-- Paginated data table (100 rows per page)
-- Column-wise multi-select dropdown filters with search support
-- Optimized for performance with large datasets
+## ✨ Features
 
-## Setup and Run:
+- 🔍 **Amazon-like Dynamic Filters**: Column-wise multi-select dropdowns that update based on other filter selections.
+- 📄 **Paginated Data Table**: Smooth scrolling with 100 rows per page.
+- ⚡ **Performance-Optimized**: Efficient rendering with large datasets.
+- 🔧 **Searchable Dropdown Filters**: Fast filtering with built-in search.
+- 📱 **Responsive UI**: Looks great on desktop and mobile.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-link>
-    cd bi-dashboard
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-3.  **Place CSV data:**
-    Ensure `dataset_small.csv` and `dataset_large.csv` are placed in the `public/` directory.
-    (These files should be provided separately for the assignment).
+---
 
-4.  **Run the application:**
-    ```bash
-    npm start
-    ```
-    The application will open in your browser at `http://localhost:3000`.
+## 🚀 Getting Started
 
-## Testing:
+### 1. Clone the Repository
 
-Run unit tests:
+```bash
+git clone https://github.com/your-username/bi-dashboard.git
+cd bi-dashboard
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Add Your CSV Data
+
+Place your `dataset_small.csv` and `dataset_large.csv` inside the `public/` folder.
+
+### 4. Start the Development Server
+
+```bash
+npm start
+```
+
+The app will be available at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧪 Running Tests
 
 ```bash
 npm test
 ```
+
+---
+
+## 📸 Screenshots
+
+| Main Page                                                            | Filters Applied                                                          |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![Main Page](./public/Screenshot%202025-07-12%20at%203.03.56 PM.png) | ![Filtered View](./public/Screenshot%202025-07-12%20at%203.04.04 PM.png) |
+
+---
+
+## 👤 Author
+
+**Thilak S**  
+🌐 [thilakjo.com](https://thilakjo.com)  
+🔗 [LinkedIn](https://linkedin.com/in/thilakjo) • [GitHub](https://github.com/thilakjo)
+
+---
